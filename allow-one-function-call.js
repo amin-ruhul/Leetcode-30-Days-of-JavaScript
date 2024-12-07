@@ -1,8 +1,8 @@
 const once = function(fn) {
-    let isFastTime = true;
+    let isFirstTime = true;
 	return function(...args){
-        if(!isFastTime) return;
-        isFastTime = false;
+        if(!isFirstTime) return;
+        isFirstTime = false;
         return fn(...args)
     }
 };
